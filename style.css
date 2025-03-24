@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "arial", Poppins, sans-serif;
+  font-size: large;
+}
+#maincontainer {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: rgb(20, 250, 46);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1%;
+}
+h1 {
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: xxx-large;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20%;
+}
+.container button {
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.container .rock {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Rock.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .paper {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Paper.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .scissor {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Scissors.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.userchoice {
+  width: 100%;
+  height: 60px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5%;
+}
+.computer {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5%;
+}
+.result {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5%;
+}
+.score {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.score .reset {
+  width: 100px;
+  height: 60%;
+  border-radius: 5px;
+  border: 2px solid black;
+  text-align: center;
+  cursor: pointer;
+  font-size: medium;
+  color: white;
+  background-color: rgb(247, 68, 8);
+}
+.Rock {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 60px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Rock.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Paper {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 60px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Paper.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Scissor {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 60px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Scissors.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container button:active {
+  transform: scale(0.95);
+  border: 2px solid white;
+}
+.score .reset:active {
+  transform: scale(0.95);
+  border: 2px solid white;
+  color: black;
+}
+@media screen and (max-width: 505px) {
+  * {
+    font-size: medium;
+  }
+  h1 {
+    margin-bottom: 75px;
+    font-size: xx-large;
+  }
+  .container {
+    gap: 10%;
+  }
+  .container .rock {
+    height: 70px;
+    width: 350px;
+  }
+  .container .paper {
+    height: 70px;
+    width: 350px;
+  }
+  .container .scissor {
+    height: 70px;
+    width: 350px;
+  }
+  .userchoice {
+    margin-top: 75px;
+  }
+  .Rock {
+    height: 60px;
+    width: 85px;
+  }
+  .Paper {
+    height: 60px;
+    width: 85px;
+  }
+  .Scissor {
+    height: 60px;
+    width: 85px;
+  }
+  .computer {
+    gap: 1.5%;
+  }
+  .userchoice {
+    gap: 1.5%;
+  }
+  .score {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    gap: 15%;
+  }
+  .score .reset {
+    height: 35%;
+  }
+}
+@media screen and (max-width: 310px) {
+  h1 {
+    font-size: x-large;
+  }
+}
+@media screen and (max-width: 280px) {
+  * {
+    font-size: small;
+  }
+  .score {
+    font-size: x-small;
+  }
+  .Rock {
+    height: 50px;
+    width: 70px;
+  }
+  .Paper {
+    height: 50px;
+    width: 70px;
+  }
+  .Scissor {
+    height: 50px;
+    width: 70px;
+  }
+  .container {
+    gap: 5%;
+  }
+  .userchoice {
+    margin-top: 60px;
+  }
+  .score .reset {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 270px) {
+  h1 {
+    margin-bottom: 60px;
+  }
+  .container .rock {
+    height: 50px;
+    width: 400px;
+  }
+  .container .paper {
+    height: 50px;
+    width: 400px;
+  }
+  .container .scissor {
+    height: 50px;
+    width: 400px;
+  }
+  .container {
+    gap: 5%;
+  }
+  .userchoice {
+    margin-top: 50px;
+  }
+  .Rock {
+    height: 40px;
+    width: 60px;
+  }
+  .Paper {
+    height: 40px;
+    width: 60px;
+  }
+  .Scissor {
+    height: 40px;
+    width: 60px;
+  }
+  .score .reset {
+    height: 33%;
+    width: 75px;
+  }
+}
+@media screen and (max-width: 235px) {
+  * {
+    font-size: x-small;
+  }
+  h1 {
+    font-size: large;
+  }
+  .userchoice {
+    margin-top: 50px;
+    height: 40px;
+  }
+  .computer {
+    height: 40px;
+  }
+  .result {
+    height: 40px;
+  }
+  .Rock {
+    height: 40px;
+    width: 60px;
+  }
+  .Paper {
+    height: 40px;
+    width: 60px;
+  }
+  .Scissor {
+    height: 40px;
+    width: 60px;
+  }
+  .score {
+    font-size: xx-small;
+  }
+}
+@media screen and (max-width: 195px) {
+  * {
+    font-size: x-small;
+  }
+  h1 {
+    margin-bottom: 50px;
+    font-size: medium;
+  }
+  .container {
+    gap: 5%;
+  }
+  .container .rock {
+    height: 40px;
+    width: 300px;
+  }
+  .container .paper {
+    height: 40px;
+    width: 300px;
+  }
+  .container .scissor {
+    height: 40px;
+    width: 300px;
+  }
+  .userchoice {
+    margin-top: 50px;
+    height: 40px;
+  }
+  .computer {
+    height: 40px;
+  }
+  .result {
+    height: 40px;
+  }
+  .Rock {
+    height: 30px;
+    width: 50px;
+  }
+  .Paper {
+    height: 30px;
+    width: 50px;
+  }
+  .Scissor {
+    height: 30px;
+    width: 50px;
+  }
+  .score {
+    font-size: 7px;
+    height: 70px;
+  }
+  .score .reset {
+    height: 35%;
+    font-size: x-small;
+    width: 60px;
+  }
+}
+@media screen and (max-width: 155px) {
+  * {
+    font-size: 5px;
+  }
+  h1 {
+    font-size: small;
+  }
+  .userchoice {
+    margin-top: 40px;
+  }
+  .score {
+    font-size: 5px;
+    height: 40px;
+  }
+  .score .reset {
+    height: 50%;
+    font-size: xx-small;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 125px) {
+  h1 {
+    font-size: x-small;
+  }
+}
