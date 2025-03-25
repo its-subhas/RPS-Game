@@ -54,6 +54,9 @@ function rock() {
   if (computerchoice === "Rock") {
     result = "Match Draw !";
     score.draw++;
+  } else if (computerchoice === "Paper") {
+    result = "You Lose !";
+    score.lost++;
   } else {
     result = "You Win !";
     score.won++;
@@ -73,6 +76,9 @@ function paper() {
   if (computerchoice === "Paper") {
     result = "Match Draw !";
     score.draw++;
+  } else if (computerchoice === "Rock") {
+    result = "You Win !";
+    score.won++;
   } else {
     result = "You Lose !";
     score.lost++;
